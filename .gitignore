@@ -1,0 +1,15 @@
+# Python and project
+.env
+./Log_analysis/venv/*
+.ipynb_checkpoints
+__pycache__
+.coverage
+
+# IDE
+.idea
+
+# Mac OS
+.DS_Store
+
+# Results
+artifacts/
