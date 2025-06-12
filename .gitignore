@@ -1,6 +1,7 @@
 # Python and project
 .env
 Log_analysis/venv
+Log_analysis/pydeeplog/artifacts
 .ipynb_checkpoints
 __pycache__
 .coverage
