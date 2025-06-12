@@ -1,0 +1,21 @@
+filebeat.inputs:
+- type: filestream
+  id: my-root-log-stream
+  enabled: true
+  paths:
+    - /var/log/app/log.txt  # Đường dẫn BÊN TRONG container Filebeat
+                            # nơi file log.txt từ host được mount vào.
+
+# Tắt output mặc định là Elasticsearch
+output.elasticsearch:
+  enabled: false
+
+# Cấu hình output là Kafka
+output.kafka:
+  hosts: ["kafka:29092"] # "kafka" là tên service của Kafka, 29092 là port internal
+  topic: 'filebeat-logs'
+  partition.round_robin:
+    reachable_only: false
+  required_acks: 1
+  compression: gzip
+  max_message_bytes: 1000000

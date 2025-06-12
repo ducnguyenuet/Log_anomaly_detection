@@ -1,6 +1,6 @@
 # Python and project
 .env
-./Log_analysis/venv/*
+Log_analysis/venv
 .ipynb_checkpoints
 __pycache__
 .coverage
